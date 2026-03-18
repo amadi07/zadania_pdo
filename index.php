@@ -24,6 +24,13 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo $row['imie']." ".$row['nazwisko']."<br>";
 }
 */
-
-
+// cw 2
+/*
+$query = "SELECT nazwa,cena FROM dania"; 
+$res = $connection->query($query);
+echo "<hr>";
+while ($row = $res->fetch(PDO::FETCH_ASSOC)){
+    echo $row['nazwa']." ".$row['cena']."PLN <br>";
+}
+*/
 ?>
