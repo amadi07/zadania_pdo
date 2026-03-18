@@ -16,32 +16,40 @@ try {
 }
 
 // zad1
-/*
+
 $query = "Select imie,nazwisko FROM pracownicy";
 $result = $connection->query($query);
 echo "<br>";
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     echo $row['imie']." ".$row['nazwisko']."<br>";
 }
-*/
+
 // cw 2
-/*
+
 $query = "SELECT nazwa,cena FROM dania"; 
 $res = $connection->query($query);
 echo "<hr>";
 while ($row = $res->fetch(PDO::FETCH_ASSOC)){
     echo $row['nazwa']." ".$row['cena']."PLN <br>";
 }
-*/
+
 
 // cw 3
 
-/*
+
 echo "<hr>";
 $query = "SELECT * FROM filmy";
 $res = $connection->query($query);
 while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
     echo $row['tytul']." ".$row['rok']."r.  ".$row['ocena']."/10 <br>";
 }
-*/
+
+
+// zad 5
+echo "<hr>";
+$query = "SELECT tytul FROM filmy WHERE ocena = 5";
+$res = $connection->query($query);
+while( $row = $res->fetch(PDO::FETCH_ASSOC)){
+    echo $row['tytul']."<br>";
+}
 ?>
