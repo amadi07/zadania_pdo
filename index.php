@@ -45,11 +45,18 @@ while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
 }
 
 
-// zad 5
+// zad 2
 echo "<hr>";
 $query = "SELECT tytul FROM filmy WHERE ocena = 5";
 $res = $connection->query($query);
 while( $row = $res->fetch(PDO::FETCH_ASSOC)){
     echo $row['tytul']."<br>";
 }
+
+// zad 4
+echo "<hr>";
+$query = "INSERT INTO uczniowie(imie,nazwisko,wiek) VALUES(?,?,?)";
+$connection->prepare($query)->execute(["Adam", "Kowal", 10]);
+echo "Dodano ucznia<br>";
+
 ?>
