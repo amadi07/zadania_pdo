@@ -33,4 +33,15 @@ while ($row = $res->fetch(PDO::FETCH_ASSOC)){
     echo $row['nazwa']." ".$row['cena']."PLN <br>";
 }
 */
+
+// cw 3
+
+/*
+echo "<hr>";
+$query = "SELECT * FROM filmy";
+$res = $connection->query($query);
+while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
+    echo $row['tytul']." ".$row['rok']."r.  ".$row['ocena']."/10 <br>";
+}
+*/
 ?>
