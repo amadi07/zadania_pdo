@@ -6,7 +6,7 @@ $haslo = "";
 
 try {
     $connection = new PDO(
-        "mysql:host=$server;dbname=$baza;charset=utf8",
+        "mysql:host=$serwer;dbname=$baza;charset=utf8",
         $uzytkownik,
         $haslo
     );
@@ -14,5 +14,16 @@ try {
 } catch (PDOException $e) {
     print "Error: ". $e->getMessage();
 }
+
+// zad1
+/*
+$query = "Select imie,nazwisko FROM pracownicy";
+$result = $connection->query($query);
+echo "<br>";
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    echo $row['imie']." ".$row['nazwisko']."<br>";
+}
+*/
+
 
 ?>
